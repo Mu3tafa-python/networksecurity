@@ -1,14 +1,26 @@
 
-from pymongo.mongo_client import MongoClient
+import os
 
-uri = "mongodb+srv://krishaitechnologies:<@password>@cluster0.wnqb6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+import certifi
+from dotenv import load_dotenv
+from pymongo import MongoClient
 
-# Create a new client and connect to the server
-client = MongoClient(uri)
+load_dotenv()
 
-# Send a ping to confirm a successful connection
+uri = os.getenv("MONGO_DB_URL")
+
+if not uri:
+    raise ValueError("MONGO_DB_URL is missing from .env")
+
 try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
+    with MongoClient(
+        uri,
+        tlsCAFile=certifi.where(),
+        serverSelectionTimeoutMS=10000
+    ) as client:
+
+        client.admin.command("ping")
+        print("Successfully connected to MongoDB Atlas!")
+
 except Exception as e:
-    print(e)
+    print(f"MongoDB connection failed: {e}")
