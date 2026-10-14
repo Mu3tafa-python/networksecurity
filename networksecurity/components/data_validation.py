@@ -26,6 +26,7 @@ class DataValidation:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
+        
     def validate_number_of_columns(self,dataframe:pd.DataFrame)->bool:
         try:
             number_of_columns=len(self._schema_config)
