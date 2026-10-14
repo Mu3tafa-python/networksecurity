@@ -1,0 +1,24 @@
+[ 2026-10-14 11:34:12,221 ] 164 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2026-10-14 11:34:24,444 ] 20 root - INFO - Initiate the data ingestion
+[ 2026-10-14 11:34:49,185 ] 66 root - INFO - Performed train test split on the dataframe
+[ 2026-10-14 11:34:49,185 ] 68 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-10-14 11:34:49,186 ] 76 root - INFO - Exporting train and test file path.
+[ 2026-10-14 11:34:49,350 ] 85 root - INFO - Exported train and test file path.
+[ 2026-10-14 11:34:49,351 ] 22 root - INFO - Data Initiation Completed
+[ 2026-10-14 11:34:49,364 ] 26 root - INFO - Initiate the data Validation
+[ 2026-10-14 11:34:49,451 ] 32 root - INFO - Required number of columns:2
+[ 2026-10-14 11:34:49,451 ] 33 root - INFO - Data frame has columns:31
+[ 2026-10-14 11:34:49,451 ] 32 root - INFO - Required number of columns:2
+[ 2026-10-14 11:34:49,451 ] 33 root - INFO - Data frame has columns:31
+[ 2026-10-14 11:34:49,980 ] 28 root - INFO - data Validation Completed
+[ 2026-10-14 11:34:49,980 ] 31 root - INFO - data Transformation started
+[ 2026-10-14 11:34:49,980 ] 63 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2026-10-14 11:34:49,980 ] 65 root - INFO - Starting data transformation
+[ 2026-10-14 11:34:50,091 ] 48 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2026-10-14 11:34:50,091 ] 53 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-10-14 11:34:50,300 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-10-14 11:34:50,308 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-10-14 11:34:50,308 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-10-14 11:34:50,314 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-10-14 11:34:50,316 ] 35 root - INFO - data Transformation completed
+[ 2026-10-14 11:34:50,317 ] 37 root - INFO - Model Training sstared

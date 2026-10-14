@@ -38,7 +38,8 @@ class DataIngestion:
 
             df=pd.DataFrame(list(collection.find()))
             if "_id" in df.columns.to_list():
-                df=df.drop(columns=["_id"],axis=1)
+                df = df.drop(columns=["_id"])
+                
             
             df.replace({"na":np.nan},inplace=True)
             return df
@@ -85,7 +86,7 @@ class DataIngestion:
 
             
         except Exception as e:
-            raise NetworkSecurityException(e,sys)
+            raise NetworkSecurityException(e,sys) from e
         
         
     def initiate_data_ingestion(self):
@@ -96,6 +97,6 @@ class DataIngestion:
             dataingestionartifact=DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
                                                         test_file_path=self.data_ingestion_config.testing_file_path)
             return dataingestionartifact
-
         except Exception as e:
-            raise NetworkSecurityException
+            raise NetworkSecurityException(e, sys) from e
+
