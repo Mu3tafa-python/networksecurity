@@ -51,7 +51,6 @@ class DataValidationConfig:
         )
 
 
-
 class DataTransformationConfig:
      def __init__(self,training_pipeline_config:TrainingPipelineConfig):
         self.data_transformation_dir: str = os.path.join( training_pipeline_config.artifact_dir,training_pipeline.DATA_TRANSFORMATION_DIR_NAME )
