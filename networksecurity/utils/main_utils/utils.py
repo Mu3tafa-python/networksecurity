@@ -61,6 +61,7 @@ def load_object(file_path: str, ) -> object:
             return pickle.load(file_obj)
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
+
     
 def load_numpy_array_data(file_path: str) -> np.array:
     """
@@ -86,6 +87,7 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
 
             gs = GridSearchCV(model,para,cv=3)
             gs.fit(X_train,y_train)
+
 
             model.set_params(**gs.best_params_)
             model.fit(X_train,y_train)

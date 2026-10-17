@@ -1,0 +1,11 @@
+[ 2026-10-17 12:43:02,541 ] 164 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2026-10-17 12:43:36,033 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[ 2026-10-17 12:43:36,971 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[ 2026-10-17 12:43:37,953 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-10-17 12:43:37,959 ] 107 dagshub - INFO - Accessing as Mu3tafa-python
+[ 2026-10-17 12:43:38,859 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/krishnaik06/networksecurity "HTTP/1.1 404 Not Found"
+[ 2026-10-17 12:43:39,819 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-10-17 12:43:39,821 ] 107 dagshub - INFO - Repository networksecurity doesn't exist, creating it under organization "krishnaik06".
+[ 2026-10-17 12:43:40,766 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/api/v1/org/krishnaik06/repos "HTTP/1.1 500 Internal Server Error"
+[ 2026-10-17 12:43:40,766 ] 163 dagshub.upload.wrapper - ERROR - Response (500):
+{"message":"GetOrgByName","status":"error","support_id":"4e00c385db9934025b10c58e3c4787eb"}
